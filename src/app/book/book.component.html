@@ -1,0 +1,12 @@
+<h1>{{ title }}</h1>
+<input class="book-filter"
+placeholder="Filter your books.."
+(input)="updateBookSearchTerm($event)">
+<div>
+<a href='' routerLink="new">Add a book</a>
+</div>
+<app-book-card
+  *ngFor="let book of books$ | async | bookFilter:bookSearchTerm"
+  [content]="book"
+  (detailClick)="goToBookDetails($event)">
+</app-book-card>
