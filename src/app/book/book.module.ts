@@ -5,6 +5,9 @@ import { BookFilterPipe } from './pipes/book-filter.pipe';
 import { BookCardComponent } from './book-card/book-card.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookRoutingModule } from './book-routing.module';
+import { BookNewComponent } from './book-new/book-new.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,10 +17,12 @@ import { BookRoutingModule } from './book-routing.module';
     BookCardComponent,
     BookFilterPipe,
     BookDetailComponent,
+    BookNewComponent
     ],
   imports: [
     CommonModule,
-    BookRoutingModule
+    BookRoutingModule,
+    ReactiveFormsModule
   ],
   exports: [
     BookComponent

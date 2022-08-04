@@ -1,5 +1,13 @@
 export interface Book {
-  id: string;
+  isbn: string;
+  cover: string;
+  title: string;
+  abstract: string;
+  author: string;
+}
+
+
+  /* id: string;
   title: string;
   subtitle: string;
   isbn: string;
@@ -9,5 +17,4 @@ export interface Book {
   price: string;
   numPages: number;
   cover: string;
-  userId: number;
-}
+  userId: number; */

@@ -11,6 +11,8 @@ export class BookApiService {
 
   constructor(private http: HttpClient) {}
 
+  private endpoint = 'http://localhost:4730';
+
 
   /*books: Book[] = [
     {
@@ -39,6 +41,10 @@ getAll(): Observable<Book[]>{
 
 getBookByISBN(isbn: string): Observable<Book>{
   return this.http.get<Book>(`http://localhost:4730/books/${isbn}`);
+}
+
+create(book: Book): Observable<Book> {
+  return this.http.post<Book>(`http://localhost:4730/books/`, book);
 }
 
 }
